@@ -1,4 +1,4 @@
-# Evaluation for RR
+# Evaluation
 
 Thank you for reviewing this project!!
 
@@ -19,7 +19,6 @@ Please click in the corresponding link to find:
 [The pipeline components](docs/)
 
 [The API functioning](docs/)
-
 
 
 
