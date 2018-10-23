@@ -14,7 +14,7 @@ Please click in the corresponding link to find:
 
 [The description of the dataset](docs/dataset_description.md)
 
-[The effective graph design](docs/)
+[The effective graph design](docs/graph_design.md)
 
 [The pipeline components](docs/)
 

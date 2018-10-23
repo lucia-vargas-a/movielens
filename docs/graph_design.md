@@ -3,13 +3,13 @@ TODO: description
 
 ![alt text](docs/graph_design.jpg)
 
-![alt text](https://github.com/pilotlu/movielens/blob/master/docs/graph_design.jpg)
-
 ### Nodes
-TODO:
+User
+Movie
+Database
 
 ### Relationships
-TODO:
+User RATED Movie
+Database STORED Movie
+Movie HAD Category
 
-### Properties
-TODO:
