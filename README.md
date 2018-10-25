@@ -21,21 +21,21 @@ and retrieve the results
 
 4. A unitest to validate that a dataset of movies was loaded completely
 
-    [unitest code](python/test.py)
+    [unitest code](test.py)
 
 #### Data pipeline code details
 
 ##### Dataset source files
 Defined as parameters in order to allow flexibility without affecting the code.
 - The configuration file can be found [here](config/movielens_config.json)
-- The code to read the configuration can be found in the function [get_config()](python/consumer.py)
+- The code to read the configuration can be found in the function [get_config()](consumer.py)
 
 ##### Dataset consumption
-Built in the class [Moviliens_Consumer](python/consumer.py) which contains 3 functions:
+Built in the class [Moviliens_Consumer](consumer.py) which contains 3 functions:
 - __init__ to initialize the class components
 - **create_constraints()** to build the constraints required before loading data into the graph database
 - **create_from_dataset** to consume the dataset from the csv files
-3. The main function to consume the data can be found [here](python/main.py)
+3. The main function to consume the data can be found [here](main.py)
 
 #### Selected languages
 - The graph database is implemented in **Neo4j**

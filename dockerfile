@@ -2,13 +2,13 @@
 FROM python:3
 
 # Set the working directory
-WORKDIR /moviliens/python
+WORKDIR /movielens
 
 # Copy the source code into the container
-COPY . /moviliens
+COPY . /movielens
 
 # Install the python packages required, as specified in the file requirements.txt
-RUN pip3 install --trusted-host pypi.python.org -r requirements.txt
+RUN pip3 install -r requirements.txt
 
 # Make port 80 available outside this container
 EXPOSE 80
@@ -17,4 +17,4 @@ EXPOSE 80
 ENV NAME World
 
 # Run the main python application file when the container launches
-CMD ["python3", "main.py"]
+CMD ["python3", "python/main.py"]

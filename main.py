@@ -2,7 +2,7 @@
 This main function manages the pipeline to cosume and handle data in neo4j
 """
 
-from python.consumer import Moviliens_Consumer, get_config
+from consumer import Movielens_Consumer, get_config
 import logging
 import time
 
@@ -18,7 +18,7 @@ if __name__ == '__main__':
     config_file = get_config()
 
     # Instance to consume data
-    consumer = Moviliens_Consumer(config_file)
+    consumer = Movielens_Consumer(config_file)
 
     # Create the indexes required before loading data into neo4j
     constraints_start = time.time()

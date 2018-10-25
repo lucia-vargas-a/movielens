@@ -5,7 +5,7 @@ from py2neo import Graph, Database
 
 
 # Default location of the configuration and dataset files
-DEFAULT_CONFIG_PATH = 'config//movielens_config.json'
+DEFAULT_CONFIG_PATH = 'config/movielens_config.json'
 DEFAULT_DATASET_PATH = 'dataset/movies.csv'
 
 # Define graph database objects
@@ -22,15 +22,15 @@ def get_config():
     Function to obtain the main parameters of source dataset and connections to the database from a configuration file
     """
     dir_name, running_filename = os.path.split(os.path.abspath(__file__))
-    file_dir = os.path.dirname(dir_name)
+    #file_dir = os.path.dirname(dir_name)
     config_file_name = DEFAULT_CONFIG_PATH
-    config_path = os.path.join(file_dir, config_file_name)
+    config_path = os.path.join(dir_name, config_file_name)
 
     with open(config_path) as config_file:
         config = json.load(config_file)
     return config
 
-class Moviliens_Consumer(object):
+class Movielens_Consumer(object):
     """This class manages the pipeline to consume the dataset and store the data in the graph database neo4j"""
 
     def __init__(self, config_file):
