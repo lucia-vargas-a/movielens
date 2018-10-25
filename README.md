@@ -3,58 +3,42 @@
 Thank you for reviewing this project!!
 
 The goal is to to analyze the dataset of moviliens by designing an effective graph structure and data pipeline.
- 
-####Project components
+
+
+#### Project components
 
 1. An effective graph structure out of the dataset
     The graph was build using the Arrows tool for Neo4j graph databases
     
-2. The design of a data pipeline to ingest the data into the graph database
+    [Graph design](docs/graph_design.md)
 
+2. The design of a data pipeline to ingest the data into the graph database
+    
 3. An API to retrieve individual node in the graph as well as functionality to search the graph
 and retrieve the results
 
+
 #### Data pipeline code details
 
-1. The dataset source files are defined as parameters in order to allow flexibility without affecting the code.
- 
- The configuration file can be found [here](config/movielens_config.json)
- 
- The code to read the configuration can be found in the function [get_config()](python/consumer.py)
+##### Dataset source files
+Defined as parameters in order to allow flexibility without affecting the code.
+- The configuration file can be found [here](config/movielens_config.json)
+- The code to read the configuration can be found in the function [get_config()](python/consumer.py)
 
-2. The dataset consumption is built in the class [Moviliens_Consumer](python/consumer.py) which contains 3 functions:
-
+##### Dataset consumption
+Built in the class [Moviliens_Consumer](python/consumer.py) which contains 3 functions:
 - __init__ to initialize the class components
 - **create_constraints()** to build the constraints required before loading data into the graph database
 - **create_from_dataset** to consume the dataset from the csv files
-
 3. The main function to consume the data can be found [here](python/main.py)
 
-
 #### Selected languages
-
-The graph database is implemented in **Neo4j**
-
-The code to consume the data is written in **Python 3**
-
-The repository is built on Github
-
-The container is built using Docker
+- The graph database is implemented in **Neo4j**
+- The code to consume the data is written in **Python 3**
+- The repository is built on Github
+- The container is built using Docker
 
 
- 
-Please click in the corresponding link to find:
 
-[Graph design](docs/graph_design.md)
-
-[Pipeline code](python/)
-
-[API code](rest_api/server.py)
-
-And a bonus of a simple test:
-
-[Test code](python/test.py)
-
-
->author: Lucía Vargas    
+>**author: Lucía Vargas**    
 [linkedin](https://www.linkedin.com/in/lucia-vargasa/)
