@@ -114,7 +114,7 @@ class Moviliens_Consumer(object):
             MERGE (user:User {userId:rline.userId})
             WITH rline
             MATCH (movie:Movie {movieId:rline.movieId})
-            CREATE (user)-[r:RATED]->(movie)
+            MERGE (user)-[r:RATED]->(movie)
             SET r.rating = toFloat(rline.rating),
                 r.timestamp = ToInt(rline.timestamp)
             ;""" % self.rating_path
