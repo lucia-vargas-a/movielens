@@ -23,6 +23,10 @@ Please click in the corresponding link to find:
 
 [API code](rest_api/server.py)
 
+And a bonus of a simple test:
+
+[Test code](python/test.py)
+
 
 >author: Lucía Vargas    
 [linkedin](https://www.linkedin.com/in/lucia-vargasa/)
