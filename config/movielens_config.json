@@ -1,0 +1,10 @@
+{
+  "files": {
+    "movie": "movies.csv",
+    "rating": "ratings.csv",
+    "tag": "tags.csv",
+    "links": "links.csv",
+    "genome_tags": "genome-tags.csv",
+    "genome_scores": "genome-scores.csv"
+  }
+}
