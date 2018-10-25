@@ -45,6 +45,23 @@ class Moviliens_Consumer(object):
     def __init__(self, config_file):
         self.config = config_file
 
+
+    def create_constraints(self):
+        try:
+            # create constraints for unique propoerties
+            query_unique = """CREATE CONSTRAINT ON (u:User) ASSERT u.user_id IS UNIQUE;"""
+            graph.run(query_unique)
+            query_unique = """CREATE CONSTRAINT ON (m:Movie) ASSERT m.movie_id IS UNIQUE;"""
+            graph.run(query_unique)
+            query_unique = """CREATE CONSTRAINT ON (g:Genre) ASSERT g.genre_name IS UNIQUE;"""
+            graph.run(query_unique)
+            query_unique = """CREATE CONSTRAINT ON (t:Tag) ASSERT t.database_id IS UNIQUE;"""
+            graph.run(query_unique)
+            query_unique = """CREATE CONSTRAINT ON (d:Database) ASSERT d.database_id IS UNIQUE;"""
+            graph.run(query_unique)
+        except ValueError:
+            return None
+
     def create_nodes(self):
         """
             Function to read the dataset and create the nodes in the database
@@ -124,21 +141,6 @@ class Moviliens_Consumer(object):
         except ValueError:
             return None
 
-    def create_constraints(self):
-        try:
-            # create constraints for unique propoerties
-            query_unique = """CREATE CONSTRAINT ON (u:User) ASSERT u.user_id IS UNIQUE;"""
-            graph.run(query_unique)
-            query_unique = """CREATE CONSTRAINT ON (m:Movie) ASSERT m.movie_id IS UNIQUE;"""
-            graph.run(query_unique)
-            query_unique = """CREATE CONSTRAINT ON (g:Genre) ASSERT g.genre_name IS UNIQUE;"""
-            graph.run(query_unique)
-            query_unique = """CREATE CONSTRAINT ON (t:Tag) ASSERT t.database_id IS UNIQUE;"""
-            graph.run(query_unique)
-            query_unique = """CREATE CONSTRAINT ON (d:Database) ASSERT d.database_id IS UNIQUE;"""
-            graph.run(query_unique)
-        except ValueError:
-            return None
 
     def create_relations(self):
 

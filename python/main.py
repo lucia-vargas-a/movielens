@@ -17,4 +17,5 @@ if __name__ == '__main__':
     # Instance to consume data
     consumer = Moviliens_Consumer(config_file)
     consumer.create_constraints()
-    consumer.read_csv()
+    consumer.create_nodes()
+    consumer.create_relations()
