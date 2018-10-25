@@ -79,7 +79,6 @@ class Moviliens_Consumer(object):
             MERGE (gen:Genre {genre_name:g})
             MERGE (movie)-[:HAS_GENRE]->(gen)
             ;""" % self.movies_path
-            logger.info("Loading movie nodes with query %s")
             graph.run(query)
 
             #Load movie databases IDs
