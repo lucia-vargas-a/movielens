@@ -13,10 +13,15 @@ The goal is to to analyze the dataset of moviliens by designing an effective gra
     [Graph design](docs/graph_design.md)
 
 2. The design of a data pipeline to ingest the data into the graph database
-    
+
 3. An API to retrieve individual node in the graph as well as functionality to search the graph
 and retrieve the results
 
+**Bonus:**
+
+4. A unitest to validate that a dataset of movies was loaded completely
+
+    [unitest code](python/test.py)
 
 #### Data pipeline code details
 
