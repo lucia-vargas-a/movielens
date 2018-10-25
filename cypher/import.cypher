@@ -12,6 +12,3 @@ RETURN count(1);
 
 LOAD CSV WITH HEADERS FROM "file:///ratings.csv" AS row
 RETURN count(1);
-
-LOAD CSV WITH HEADERS FROM "file:///tags.csv" AS row
-RETURN count(1);

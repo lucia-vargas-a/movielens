@@ -1,6 +1,5 @@
 {
   "files": {
-    "movie": "movies.csv",
     "rating": "ratings.csv",
     "tag": "tags.csv",
     "links": "links.csv",

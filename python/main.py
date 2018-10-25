@@ -14,7 +14,7 @@ if __name__ == '__main__':
     # Get the configuration parameters from the file
     config_file = get_config()
 
-    # Create the DB handler
+    # Instance to consume data
     consumer = Moviliens_Consumer(config_file)
     consumer.create_constraints()
     consumer.read_csv()

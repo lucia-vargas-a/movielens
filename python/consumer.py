@@ -121,9 +121,6 @@ class Moviliens_Consumer(object):
             ;""" % movie_path
             graph.run(query)
 
-
-
-
         except ValueError:
             return None
 
