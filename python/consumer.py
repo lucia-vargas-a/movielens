@@ -1,7 +1,6 @@
 import os
 import json
 import logging
-import csv
 from py2neo import Graph, Database
 
 
