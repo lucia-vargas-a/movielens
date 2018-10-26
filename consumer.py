@@ -9,7 +9,7 @@ DEFAULT_CONFIG_PATH = 'config/movielens_config.json'
 DEFAULT_DATASET_PATH = 'dataset/movies.csv'
 
 # Define graph database objects
-db = Database("bolt://localhost:7687")
+db = Database("bolt://127.0.0.1:7687")
 url = "bolt://localhost:7687"
 graph = Graph(url)
 

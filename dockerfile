@@ -17,4 +17,4 @@ EXPOSE 80
 ENV NAME World
 
 # Run the main python application file when the container launches
-CMD ["python3", "python/main.py"]
+CMD ["python3", "main.py"]
